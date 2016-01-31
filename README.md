@@ -19,6 +19,6 @@ sudo bash uninstall
 or type global command
 
 ```
-automate uninstall myself
+automate self-uninstall
 ```
 

@@ -26,7 +26,9 @@ function uninstall () {
 }
 
 function list () {
-    echo "Available command list:"
+    echo "Available command list:";
+    printf "\n%s\n" "install";
+    printf "\t%s\n" `ls $SCRIPTS/install | sed -e 's/\..*$//'`;
 }
 
 case "$1" in
@@ -38,6 +40,9 @@ uninstall)
     ;;
 list)
     list;
+    ;;
+self-update)
+    sudo bash ./update;
     ;;
 *)
     echo $"Usage: $0 {install|uninstall}"

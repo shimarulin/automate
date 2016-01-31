@@ -1,0 +1,22 @@
+#!/bin/bash 
+if [[ $UID != 0 ]]; then
+    echo "Please type sudo $0 $*to use this."
+    exit 1
+fi
+
+ZIP_FILE="/tmp/automate-`date +%s`.zip";
+LIB=/usr/local/lib;
+
+wget -O $ZIP_FILE https://github.com/shimarulin/automate/archive/master.zip
+unzip -d /tmp $ZIP_FILE;
+
+rm -rf $LIB/automate;
+
+cp /tmp/automate-master/. $LIB/automate/ -R;
+chmod +x $LIB/automate/automate.sh;
+rm $LIB/automate/install;
+
+echo "automate updated."
+
+rm $ZIP_FILE;
+rm -rf /tmp/automate-master

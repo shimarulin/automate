@@ -1,5 +1,5 @@
 #!/bin/bash
-
+ 
 i=$(cat /proc/$PPID/cmdline)
 if [[ $UID != 0 ]]; then
     echo "Please type sudo $0 $*to use this."
