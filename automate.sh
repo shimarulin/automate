@@ -7,7 +7,6 @@
 SCRIPTS=/usr/local/lib/automate/scripts;
 
 function install () {
-    echo "$SCRIPTS/install/$1.sh";
     if [ -e "$SCRIPTS/install/$1.sh" ]; then
         sudo bash $SCRIPTS/install/$1.sh;
     else
@@ -17,7 +16,7 @@ function install () {
 }
 
 function uninstall () {
-    if [ -e "$SCRIPTS/install/$1.sh" ]; then
+    if [ -e "$SCRIPTS/uninstall/$1.sh" ]; then
         sudo bash $SCRIPTS/uninstall/$1.sh;
     else
         echo "$1 uninstall script not available.  Skipping"
