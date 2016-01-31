@@ -44,6 +44,9 @@ list)
 self-update)
     sudo bash ./update;
     ;;
+self-uninstall)
+    sudo bash ./uninstall;
+    ;;
 *)
     echo $"Usage: $0 {install|uninstall}"
     exit 1
