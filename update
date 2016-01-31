@@ -15,6 +15,7 @@ rm -rf $LIB/automate;
 cp /tmp/automate-master/. $LIB/automate/ -R;
 chmod +x $LIB/automate/automate.sh;
 rm $LIB/automate/install;
+rm $LIB/automate/test;
 
 echo "automate updated."
 

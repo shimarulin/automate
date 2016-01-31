@@ -14,6 +14,7 @@ if [ ! -d "$LIB/automate" ]; then
     chmod +x $LIB/automate/automate.sh;
     ln -s $LIB/automate/automate.sh $BIN/automate;
     rm $LIB/automate/install;
+    rm $LIB/automate/test;
     echo "automate installed."
 else
      echo "automate already installed.  Skipping."
