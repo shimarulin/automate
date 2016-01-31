@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#export AUTOMATE_SCRIPTS=/usr/local/lib/automate/scripts;
+#export AUTOMATE_SYS=/usr/local/lib/automate/sys;
+
+SCRIPTS=/usr/local/lib/automate/scripts;
+echo "$SCRIPTS/install/java.sh";
+if [ -e "$SCRIPTS/install/java.sh" ]; then
+    echo "java install script available"
+else
+    echo "java install script not available.  Skipping"
+    exit 1
+fi

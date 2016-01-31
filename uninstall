@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [[ $UID != 0 ]]; then
+    echo "Please type sudo $0 $*to use this."
+    exit 1
+fi
+
+BIN=/usr/local/bin
+LIB=/usr/local/lib
+
+if [ -d "$LIB/automate" ]; then
+    rm $BIN/automate;
+    rm -rf $LIB/automate/;
+    echo "automate uninstalled."
+else
+     echo "automate already uninstalled.  Skipping."
+fi
