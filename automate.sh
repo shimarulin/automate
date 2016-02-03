@@ -1,9 +1,11 @@
 #!/bin/bash
 # v0.0.1
 
+#export AUTOMATE_HOME=/usr/local/lib/automate;
 #export AUTOMATE_SCRIPTS=/usr/local/lib/automate/scripts;
-#export AUTOMATE_SYS=/usr/local/lib/automate/sys;
+#export AUTOMATE_SYS=/usr/local/lib/automate/system;
 
+AUTOMATE=/usr/local/lib/automate;
 SCRIPTS=/usr/local/lib/automate/scripts;
 
 function install () {
@@ -41,10 +43,10 @@ list)
     list;
     ;;
 self-update)
-    sudo bash ./update;
+    sudo bash $AUTOMATE/update;
     ;;
 self-uninstall)
-    sudo bash ./uninstall;
+    sudo bash $AUTOMATE/uninstall;
     ;;
 *)
     echo $"Usage: $0 {install|uninstall}"
