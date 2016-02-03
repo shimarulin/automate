@@ -19,7 +19,7 @@ dpkg --add-architecture i386
 apt-get update
 
 for package in libncurses5:i386 libstdc++6:i386 zlib1g:i386; do
-    bash $AUTOMATE_SYS/system/package.sh $package;
+    bash $1/package.sh $package;
 done
 
 #Download and install the Android SDK

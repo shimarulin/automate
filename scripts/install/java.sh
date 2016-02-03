@@ -7,10 +7,10 @@ fi
 
 JAVAV=8;
 
-bash $AUTOMATE_SYS/system/repository.sh ppa:webupd8team/java
+bash $1/repository.sh ppa:webupd8team/java
 apt-get update;
 echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-bash $AUTOMATE_SYS/system/package.sh oracle-java$JAVAV-installer;
+bash $1/package.sh oracle-java$JAVAV-installer;
 
 # Setting Java environment variables
 apt-get -y install oracle-java$JAVAV-set-default;
