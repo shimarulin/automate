@@ -42,7 +42,7 @@ if [ ! -f $rc ]; then
     export PATH=$PATH:$DEST/android-sdk-linux/tools:$DEST/android-sdk-linux/platform-tools
     touch $rc
     echo "export ANDROID_HOME=$DEST/android-sdk-linux" >> $rc
-    echo "export PATH=$PATH:$DEST/android-sdk-linux/tools:$DEST/android-sdk-linux/platform-tools" >> $rc
+    echo "export PATH=\$PATH:$DEST/android-sdk-linux/tools:$DEST/android-sdk-linux/platform-tools" >> $rc
 else
      echo "ADB environment already set up"
 fi
